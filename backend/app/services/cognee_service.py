@@ -47,21 +47,29 @@ def setup_cognee_env() -> None:
     from app.config import get_settings
     s = get_settings()
 
+    # Configure root directories in user home folder to avoid Program Files/site-packages permission issues
+    cognee.config.system_root_directory = os.path.expanduser("~/.cognee")
+    cognee.config.data_root_directory = os.path.expanduser("~/.cognee")
+
     # LLM: Google Gemini via AI Studio
+    # NOTE: Do NOT set a custom endpoint — litellm's native `gemini/` prefix
+    # routing handles the endpoint automatically. Setting a custom endpoint
+    # overrides litellm's path construction and causes NotFoundError.
     cognee.config.set_llm_provider("gemini")
     cognee.config.set_llm_model(s.COGNEE_LLM_MODEL)
     cognee.config.set_llm_api_key(s.GEMINI_API_KEY)
-    cognee.config.set_llm_endpoint("https://generativelanguage.googleapis.com/")
 
     # Embeddings: local fastembed (free, no API key needed)
     cognee.config.set_embedding_provider(s.COGNEE_EMBEDDING_PROVIDER)
     cognee.config.set_embedding_model(s.COGNEE_EMBEDDING_MODEL)
+    cognee.config.set_embedding_dimensions(384)
 
     # Graph DB: embedded KuzuDB
     cognee.config.set_graph_database_provider(s.COGNEE_GRAPH_DB)
 
     # Vector DB: embedded LanceDB
     cognee.config.set_vector_db_provider(s.COGNEE_VECTOR_DB)
+    cognee.config.set_vector_db_subprocess_enabled(False)
 
     # Disable multi-tenant auth inside Cognee (we handle auth ourselves)
     os.environ.setdefault("ENABLE_BACKEND_ACCESS_CONTROL", "false")

@@ -1,4 +1,4 @@
-# 🦐 Copepod — The Institutional Memory Layer for GitHub Repositories
+# 🦐 Copepod - The Institutional Memory Layer for GitHub Repositories
 
 <p align="center">
   <img src="docs/assets/banner.png" alt="Copepod" width="600">
@@ -27,52 +27,7 @@ It ingests your repository's entire history (PRs, issues, AST code structure), b
 
 New install? Start here: [Docker Quick Start](#-docker-quick-start-one-command) or run the setup locally with `docker compose up --build`.
 
----
 
-## 🛠️ Core Technology Stack
-
-<table align="center">
-  <tr>
-    <td align="center" width="16.66%">
-      <a href="https://github.com/topoteretes/cognee">
-        <img src="https://raw.githubusercontent.com/topoteretes/cognee/main/docs/img/cognee_logo.png" alt="Cognee" height="32">
-        <br><sub>Cognee</sub>
-      </a>
-    </td>
-    <td align="center" width="16.66%">
-      <a href="https://fastapi.tiangolo.com/">
-        <img src="https://cdn.simpleicons.org/fastapi/009688" alt="FastAPI" height="28">
-        <br><sub>FastAPI</sub>
-      </a>
-    </td>
-    <td align="center" width="16.66%">
-      <a href="https://nextjs.org/">
-        <img src="https://cdn.simpleicons.org/nextdotjs/000000/ffffff" alt="Next.js" height="28">
-        <br><sub>Next.js</sub>
-      </a>
-    </td>
-    <td align="center" width="16.66%">
-      <a href="https://code.visualstudio.com/">
-        <img src="https://cdn.simpleicons.org/visualstudiocode/007ACC" alt="VS Code" height="28">
-        <br><sub>VS Code</sub>
-      </a>
-    </td>
-    <td align="center" width="16.66%">
-      <a href="https://www.python.org/">
-        <img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" height="28">
-        <br><sub>Python</sub>
-      </a>
-    </td>
-    <td align="center" width="16.66%">
-      <a href="https://www.docker.com/">
-        <img src="https://cdn.simpleicons.org/docker/2496ED" alt="Docker" height="28">
-        <br><sub>Docker</sub>
-      </a>
-    </td>
-  </tr>
-</table>
-
----
 
 ## 🐳 Docker Quick Start (One Command)
 

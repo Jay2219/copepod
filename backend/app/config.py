@@ -39,7 +39,7 @@ class Settings(BaseSettings):
     DATABASE_URL: str = "sqlite+aiosqlite:///./copepod.db"
 
     # ── Cognee ────────────────────────────────────────────────────────
-    COGNEE_LLM_MODEL: str = "gemini/gemini-3.5-flash"
+    COGNEE_LLM_MODEL: str = "gemini/gemini-3.1-flash-lite"
     COGNEE_EMBEDDING_PROVIDER: str = "fastembed"
     COGNEE_EMBEDDING_MODEL: str = "BAAI/bge-small-en-v1.5"
     COGNEE_GRAPH_DB: str = "kuzu"
