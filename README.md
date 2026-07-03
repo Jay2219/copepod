@@ -1,4 +1,4 @@
-# 🦐 Copepod - The Institutional Memory Layer for GitHub Repositories
+# Copepod - Institutional Memory Layer for GitHub Repositories
 
 <p align="center">
   <img src="docs/assets/banner.png" alt="Copepod" width="600">
@@ -213,14 +213,6 @@ Where `.copepod/config.json` inside your project root contains:
 }
 ```
 
----
-
-## 🦐 Copey
-
-Copepod was built for **Copey**, a digital space shrimp AI assistant. 🦐
-by the community.
-
----
 
 ## 🤝 Contributing
 

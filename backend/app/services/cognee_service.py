@@ -51,6 +51,9 @@ def setup_cognee_env() -> None:
     cognee.config.system_root_directory = os.path.expanduser("~/.cognee")
     cognee.config.data_root_directory = os.path.expanduser("~/.cognee")
 
+    # Bypass LanceDB disk spilling on Windows to prevent Datafusion spill write crashes
+    os.environ["LANCE_BYPASS_SPILLING"] = "true"
+
     # LLM: Google Gemini via AI Studio
     # NOTE: Do NOT set a custom endpoint — litellm's native `gemini/` prefix
     # routing handles the endpoint automatically. Setting a custom endpoint
